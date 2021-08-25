@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const api = require("../controllers/api");
+const API = require("../controllers/api.js");
 
-router.get("/", api.fetchAll);
-router.get("/:id", api.fetchById);
-router.post("/", api.createPost);
-router.patch("/:id", api.updatePost);
-router.delete("/id", api.deletePost);
+router.get("/", API.fetchAll);
+router.get("/:id", API.fetchById);
+router.post("/", API.createPost);
+router.patch("/:id", API.updatePost);
+router.delete("/:id", API.deletePost);
 
 module.exports = router;
