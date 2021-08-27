@@ -25,10 +25,9 @@ module.exports = class API {
 
   //Create post
   static async createPost(req, res) {
-    console.log(req);
-    // const post = req.body;  ERROR
+    const post = req.body;
     try {
-      //  await Post.create(post);  creating post item
+      await Post.create(post);
       res.status(201).json({ message: "Post created successfully" });
     } catch (error) {
       res.status(400).json({ message: error.message });
