@@ -131,7 +131,6 @@ module.exports = class API {
   static async logOut(req, res) {
     res.cookie("jwt", "", { maxAge: 0 });
     res.send({ message: "logout success." });
-    console.log("hey!");
   }
 
   static async fetchUsers(req, res) {
